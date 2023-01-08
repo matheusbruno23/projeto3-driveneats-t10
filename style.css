@@ -1,0 +1,126 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+.top{
+    width: 414px;
+    height: 92px;
+    background-color: #CF2B2B;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #FFFFFF;
+    z-index: 5;
+}
+.top h1{
+    font-size: 44px;
+    font-weight: 400;
+    margin-left: 21px;
+    font-family: Righteous;
+}
+.top p{
+    font-size: 18px;
+    margin-left: 21px;
+}
+.mid{
+    margin-top: 92px;
+    width: 414px;
+    height:  1000px;
+    background-color: #E5E5E5;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.paragraph{
+    color:#333333;
+    line-height: 32px;
+    font-size: 26px;
+    font-weight: 400;
+    font-family: Righteous;
+    margin-top: 20px;
+    margin-bottom: 17px;
+    margin-left: 19px;
+}
+.box-food{
+    width: 100%;
+    height: 230px;
+    display: flex;
+    overflow-x: scroll;
+}
+.item{
+    width: 172px;
+    height: 215px;
+    background-color: #FFFFFF;
+    padding: 14px;
+    border-radius: 9px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 18px;
+}
+
+.green{
+    border: 5px solid #32B72F;
+    padding: 9px 9px;
+}
+.check{
+    color: #32B72F;
+    font-size: 20px;
+    position: absolute;
+    bottom: 16px;
+    right: 13px;
+    display: none;
+}
+.bottom{
+    width: 414px;
+    height: 92px;
+    position: fixed;
+    bottom: 0px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bottom button{
+    width: 364px;
+    height: 61px;
+    background-color: #CBCBCB;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+    text-align: center;
+}
+
+.item-name{
+    color: #333333;
+    font-size: 16px;
+    font-weight: 700;    
+    line-height: 19px;
+}
+.description{
+    color: #A6A6A6;
+    font-size: 15px;
+    font-weight: 300; 
+    line-height: 18px;
+}
+.price{
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+}
