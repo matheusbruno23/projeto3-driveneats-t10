@@ -5,10 +5,90 @@
 body{
     font-family: 'Roboto', sans-serif;
 }
-.container{
-    margin: auto;
+.grey-screen{
+    background-color: rgba(255, 255, 255, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 6;
+}
+.hidden{
+    display: none;
+}
+.box-close{
+    background-color: #50D074;
+    height: 353px;
+    width: 377px;
+    display: flex;
+    margin-top: 300px;
+    flex-direction: column;
+    font-size:22px;
+    color: #FFFFFF;
+    z-index: 15;
+    border-radius: 9px;
+    padding: 20px;
+    opacity: 1;
+}
+.box-close .title{
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.box-close .price{
+    color: #FFFFFF;
+    font-size: 22px;
+}
+.box-close .total{
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+.end{
+    width: 100%;
+    height: 52px;
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 100px;
+    font-size: 22px;
+    color: #50D074;
+    text-align: center;
+    font-weight: 700;
+}
+.cancel{
+    width: 100%;
+    height: 52px;
+    background-color:#50D074;
+    color: #FFFFFF;
+    border: none;
+    font-size: 20px;
+    text-align: center;
+}
+.plate {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 13px;
+}
+.drink {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 13px;
+}
+.dessert {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 13px;
+}
+.total {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 13px;
 }
 .top{
     width: 414px;
@@ -70,7 +150,10 @@ body{
     justify-content: space-between;
     margin-left: 18px;
 }
-
+.bottom .close-green{
+    opacity: 1;
+    background-color: #32B72F;
+}
 .green{
     border: 5px solid #32B72F;
     padding: 9px 9px;
@@ -109,7 +192,7 @@ body{
     text-align: center;
 }
 
-.item-name{
+.itemname{
     color: #333333;
     font-size: 16px;
     font-weight: 700;    

@@ -15,7 +15,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
+    <div class="grey-screen hidden">
+        <div class="box-close">
+            <div class="title">
+                <p>Confirme seu Pedido</p>
+            </div>
+            <div class="item-price">
+                <div class="plate">
+                    <div class="name">Frango Yin Yang</div>
+                    <div class="price"> R$10,00</div>
+                </div>
+                <div class="drink">
+                    <div class="name">Coquinha Gelada</div>
+                    <div class="price"> R$10,00</div>
+                </div>
+                <div class="dessert">
+                    <div class="name">Pudim</div>
+                    <div class="price"> R$10,00</div>
+                </div>
+                <div class="total">
+                    <div class="final">Total</div>
+                    <div class="amount"> R$27,70</div>
+                </div>
+                <button class="end" onclick="sendWpp()">Tudo certo, pode pedir!</button>
+                <button class="cancel">Cancelar</button>
+            </div>
+        </div>
+    </div>
         <div class="top">
             <h1>DrivenEats</h1>
             <p>Sua comida em 6 minutos</p>
@@ -26,43 +52,43 @@
             </div>
             
             <div class="box plates">
-                <div class="item plate1" onclick="selectPlate('.plate1')">
+                <div class="item plate1" onclick="selectPlate(this)">
                     <img src="./imagens/frango_yin_yang.png">
-                    <p class="item-name">
+                    <div class="itemname">
                         Frango Yin Yang
-                    </p>
-                    <p class="description">
-                        Um pouco de batata, um pouco de salada
-                    </p>
-                    <p class="price">
-                        R$ 7,90
-                    </p>
+                    </div>
+                    <div class="description">
+                        Somente frango e batata
+                    </div>
+                    <div class="price">
+                        R$ 3,90
+                    </div>
                     <ion-icon name="checkmark-circle" class="check"></ion-icon>
                 </div>
-                <div class="item plate2" onclick="selectPlate('.plate2')">
+                <div class="item plate2" onclick="selectPlate(this)">
                     <img src="./imagens/frango_yin_yang.png">
-                    <p class="item-name">
-                        Frango Yin Yang
-                    </p>
-                    <p class="description">
-                        Um pouco de batata, um pouco de salada
-                    </p>
-                    <p class="price">
+                    <div class="itemname">
+                        Frango YY para 1
+                    </div>
+                    <div class="description">
+                        Frango, batata, legumes e arroz
+                    </div>
+                    <div class="price">
                         R$ 7,90
-                    </p>
+                    </div>
                     <ion-icon name="checkmark-circle" class="check"></ion-icon>
                 </div>
-                <div class="item plate3" onclick="selectPlate('.plate3')">
+                <div class="item plate3" onclick="selectPlate(this)">
                     <img src="./imagens/frango_yin_yang.png">
-                    <p class="item-name">
-                        Frango Yin Yang
-                    </p>
-                    <p class="description">
-                        Um pouco de batata, um pouco de salada
-                    </p>
-                    <p class="price">
-                        R$ 7,90
-                    </p>
+                    <div class="itemname">
+                        Frango YY para 2
+                    </div>
+                    <div class="description">
+                        Completão! 800g
+                    </div>
+                    <div class="price">
+                        R$ 8,90
+                    </div>
                     <ion-icon name="checkmark-circle" class="check"></ion-icon>
                 </div>
             </div>
@@ -70,43 +96,43 @@
                 <p>Agora, sua bebida</p>
             </div>
             <div class="box drinks">
-                <div class="item drink1" onclick="selectDrink('.drink1')">
+                <div class="item drink1" onclick="selectDrink(this)">
                     <img src="./imagens/coca-cola.png">
-                    <p class="item-name">
-                        Frango Yin Yang
-                    </p>
-                    <p class="description">
-                        Lata 350ml
-                    </p>
-                    <p class="price">
-                    R$ 7,90
-                    </p>
+                    <div class="itemname">
+                        Mini Coquinha
+                    </div>
+                    <div class="description">
+                        Lata 220ml
+                    </div>
+                    <div class="price">
+                    R$ 3,90
+                    </div>
                     <ion-icon name="checkmark-circle" class="check"></ion-icon>
                 </div>
-                <div class="item drink2" onclick="selectDrink('.drink2')">
+                <div class="item drink2" onclick="selectDrink(this)">
                     <img src="./imagens/coca-cola.png">
-                    <p class="item-name">
-                        Frango Yin Yang
-                    </p>
-                    <p class="description">
+                    <div class="itemname">
+                        Coquinha Gelada
+                    </div>
+                    <div class="description">
                         Lata 350ml
-                    </p>
-                    <p class="price">
-                        R$ 7,90
-                    </p>
+                    </div>
+                    <div class="price">
+                        R$ 5,90
+                    </div>
                     <ion-icon name="checkmark-circle" class="check"></ion-icon>
                 </div>
-                <div class="item drink3" onclick="selectDrink('.drink3')">
+                <div class="item drink3" onclick="selectDrink(this)">
                     <img src="./imagens/coca-cola.png">
-                    <p class="item-name">
-                        Frango Yin Yang
-                    </p>
-                    <p class="description">
-                        Lata 350ml
-                    </p>
-                    <p class="price">
+                    <div class="itemname">
+                        Coquinha Família
+                    </div>
+                    <div class="description">
+                        3 Latas 350ml - pra familia toda!
+                    </div>
+                    <div class="price">
                         R$ 7,90
-                    </p>
+                    </div>
                     <ion-icon name="checkmark-circle" class="check"></ion-icon>
                 </div>
             </div>
@@ -114,51 +140,50 @@
                 <p>Por fim, sua sobremesa</p>
             </div>
             <div class="box desserts">
-                <div class="item dessert1" onclick="selectDessert('.dessert1')">
+                <div class="item dessert1" onclick="selectDessert(this)">
                     <img src="./imagens/pudim.png">
-                    <p class="item-name">
-                        Frango Yin Yang
-                    </p>
-                    <p class="description">
-                        Apenas pudim
-                    </p>
-                    <p class="price">
-                        R$ 7,90
-                    </p>
+                    <div class="itemname">
+                        Pudim 50g
+                    </div>
+                    <div class="description">
+                        Apenas uma pessoa
+                    </div>
+                    <div class="price">
+                        R$ 4,90
+                    </div>
                     <ion-icon name="checkmark-circle" class="check"></ion-icon>
                 </div>
-                <div class="item dessert2" onclick="selectDessert('.dessert2')">
+                <div class="item dessert2" onclick="selectDessert(this)">
                     <img src="./imagens/pudim.png">
-                    <p class="item-name">
-                        Frango Yin Yang
-                    </p>
-                    <p class="description">
-                        Apenas pudim
-                    </p>
-                    <p class="price">
-                        R$ 7,90
-                    </p>
+                    <div class="itemname">
+                        Pudim 100g
+                    </div>
+                    <div class="description">
+                        Pudim para Dois
+                    </div>
+                    <div class="price">
+                        R$ 6,90
+                    </div>
                     <ion-icon name="checkmark-circle" class="check"></ion-icon>
                 </div>
-                <div class="item dessert3" onclick="selectDessert('.dessert3')">
+                <div class="item dessert3" onclick="selectDessert(this)">
                     <img src="./imagens/pudim.png">
-                    <p class="item-name">
-                        Frango Yin Yang
-                    </p>
-                    <p class="description">
-                        Apenas pudim
-                    </p>
-                    <p class="price">
-                        R$ 7,90
-                    </p>
+                    <div class="itemname">
+                        Pudinzão Família
+                    </div>
+                    <div class="description">
+                        Bandeja de Pudim
+                    </div>
+                    <div class="price">
+                        R$ 21,90
+                    </div>
                     <ion-icon name="checkmark-circle" class="check"></ion-icon>
                 </div>
             </div>
         </div>
-        <div class="bottom" onclick="closeOrder()">
-            <button class="closeButton">Selecione os 3 itens <br>fechar o pedido</button>
+        <div class="bottom">
+            <button class="closeButton" onclick="closeOrder()">Selecione os 3 itens <br>fechar o pedido</button>
         </div>
-    </div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="./script.js"></script>
 </body>
