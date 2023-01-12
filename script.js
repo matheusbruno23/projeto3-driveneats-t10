@@ -5,7 +5,7 @@ let wpp;
 let platePrice , drinkPrice, dessertPrice;
 
 //selecionar prato//
-function selectPlate(plateSelect, selectTxt){
+function selectPlate(plateSelect){
     const plateAlreadySelected = document.querySelector('.plates .green');
 
     if ( plateAlreadySelected !== null){
@@ -13,12 +13,17 @@ function selectPlate(plateSelect, selectTxt){
     }
     plateSelect.classList.add('green');
 
-    const plateName = document.querySelector('.itemname').innerHTML;
+    /*const plateName = document.querySelector('.itemname').innerHTML;
     plateTxt = plateName;
     const pPrice = document.querySelector('.price').innerHTML;
     platePrice = pPrice;
 
-
+*/
+    plateTxt = plateSelect.querySelector('.item .itemname').innerHTML;
+    platePrice = plateSelect.querySelector('.item .price').innerHTML;
+    console.log('plateTxt');
+    console.log('platePrice');
+    
     openCloseOrder()
 }
 //selecionar bebida//
@@ -29,10 +34,8 @@ function selectDrink(drinkSelect){
     }
     drinkSelect.classList.add('green');
 
-    const drinkName = document.querySelector('.itemname').innerHTML;
-    drinkTxt = drinkName
-    const dPrice = document.querySelector('.price').innerHTML;
-    drinkPrice = dPrice;
+    drinkTxt = drinkSelect.querySelector('.item .itemname').innerHTML;
+    drinkPrice = drinkSelect.querySelector('.item .price').innerHTML;
 
     openCloseOrder()
 }
@@ -45,10 +48,8 @@ function selectDessert(dessertSelect){
     }
     dessertSelect.classList.add('green');
 
-    const dessertName = document.querySelector('.itemname').innerHTML;
-    dessertTxt = dessertName;
-    const dsPrice = document.querySelector('.price').innerHTML;
-    dessertPrice = dsPrice;
+    dessertTxt = dessertSelect.querySelector('.item .itemname').innerHTML;
+    dessertPrice = dessertSelect.querySelector('.item .price').innerHTML;
 
     openCloseOrder()
 }
@@ -78,7 +79,7 @@ function closeOrder(){
                 platePrice = platePrice.replace(',','.');
                 platePrice = platePrice.replace(',','.');
 
-                finalPrice = Number(platePrice) + Number(drinkPrice) + Number(dessertPrice);
+                finalPrice = parseFloat(platePrice) + parseFloat(drinkPrice) + parseFloat(dessertPrice);
 
                 
                 const greyscreen = document.querySelector('.grey-screen');
